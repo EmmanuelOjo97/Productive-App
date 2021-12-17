@@ -1,0 +1,120 @@
+.inputSubmit {
+  display: block;
+  margin: 10px auto;
+  border: 0px;
+  padding: 10px;
+  font-size: 15px;
+  font-family: "Trebuchet MS", sans-serif;
+  border-radius: 5px;
+}
+
+.submitButton {
+  display: block;
+  margin: 20px auto;
+  border: 0px;
+  border-radius: 8px;
+  padding: 5px;
+  background-color: #84ceeb;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.submitButton:hover {
+  background-color: green;
+  opacity: 0.4;
+}
+
+@media only screen and (max-width: 519px) {
+  .eachItem {
+    align-items: center;
+    justify-content: space-between;
+    margin: 1px;
+    border-radius: 5%;
+    overflow-wrap: break-word;
+    white-space: normal;
+    background-color: #84ceeb;
+    margin-bottom: 16px;
+    transition: 0.5s;
+  }
+  .eachItem:hover {
+    opacity: 0.4;
+    background-color: green;
+    cursor: pointer;
+  }
+  .completeTodo {
+    align-items: center;
+    justify-content: space-between;
+    margin: 1px;
+    border-radius: 5%;
+    overflow-wrap: break-word;
+    white-space: normal;
+    background-color: green;
+    margin-bottom: 16px;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+}
+.buttonFunction {
+  flex-wrap: wrap;
+  margin: 5px;
+  margin-right: 10px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.list {
+  margin: auto;
+  max-width: 500px;
+}
+.itemName {
+  margin-left: 10px;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+@media only screen and (min-width: 520px) {
+  .eachItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 16px;
+    overflow-wrap: break-word;
+    white-space: normal;
+    background-color: #84ceeb;
+    margin-bottom: 16px;
+    transition: 0.5s;
+  }
+  .eachItem:hover {
+    opacity: 0.4;
+    background-color: green;
+    cursor: pointer;
+  }
+
+  .completeTodo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 16px;
+    overflow-wrap: break-word;
+    white-space: normal;
+    background-color: green;
+    margin-bottom: 16px;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+}
+
+.page {
+  opacity: 0.8;
+  background: linear-gradient(to bottom, #84ceeb, #5680e9);
+  position: fixed;
+  width: 100%;
+  height: 90%;
+  top: 10%;
+  left: 0px;
+  z-index: 1000;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  text-align: center;
+}
