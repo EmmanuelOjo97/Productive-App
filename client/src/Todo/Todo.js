@@ -10,8 +10,9 @@ function Todo() {
   const [days, setDays] = useState("");
   const [itemList, setItemLists] = useState([]);
   const [completeTodo, setCompleteTodo] = useState(false);
-  useEffect(() => {
-    axios.get("http://localhost:3001/read").then((response) => {
+
+  https: useEffect(() => {
+    axios.get("https://productivi.herokuapp.com/read").then((response) => {
       console.log(response);
       setItemLists(response.data.map((obj) => ({ ...obj, complete: false })));
     });
@@ -19,7 +20,7 @@ function Todo() {
   const addToList = (e) => {
     e.preventDefault();
     if (itemName !== "") {
-      axios.post("http://localhost:3001/insert", {
+      axios.post("https://productivi.herokuapp.com/insert", {
         itemName: itemName,
         days: parseInt(days),
       });
@@ -27,7 +28,7 @@ function Todo() {
     }
   };
   const deleteFood = (id) => {
-    axios.delete(`http://localhost:3001/delete/${id}`);
+    axios.delete(`https://productivi.herokuapp.com/delete/${id}`);
   };
   const completeItem = (id) => {
     const item = itemList.find((item) => item._id === id);
