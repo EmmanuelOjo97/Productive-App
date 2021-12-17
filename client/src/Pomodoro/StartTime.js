@@ -14,11 +14,6 @@ function StartTime() {
     setTimers(true);
   };
 
-  // useEffect(() => {
-  //   setTimers(true);
-  //   setStart(!start);
-  // }, [input, start]);
-
   return (
     <div className={styles.page}>
       <h1 className={styles.title}>Pomodoro Timer</h1>

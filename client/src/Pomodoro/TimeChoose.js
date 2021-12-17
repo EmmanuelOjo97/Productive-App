@@ -2,7 +2,6 @@ import React from "react";
 import { useState, useEffect } from "react";
 import styles from "./styles.module.css";
 
-// timers, setTimers, setInput
 function TimeChoose({ input }) {
   const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(input);
