@@ -5,10 +5,10 @@ const FoodSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  daysSinceEaten: {
-    type: Number,
-    required: true,
-  },
+  // daysSinceEaten: {
+  //   type: Number,
+  //   required: true,
+  // },
 });
 
 const FoodModel = mongoose.model("Food", FoodSchema);
