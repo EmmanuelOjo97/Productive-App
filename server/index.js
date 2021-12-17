@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
-import FoodModel from "./food.js";
+import ItemModel from "./food.js";
 import dotenv from "dotenv";
 
 const app = express();
@@ -17,13 +17,13 @@ mongoose.connect(process.env.CONNECTION_URL, {
 });
 
 app.post("/insert", async (req, res) => {
-  const nameOfFood = req.body.foodName;
+  const itemName = req.body.itemName;
   const days = req.body.days;
 
-  const food = new FoodModel({ foodName: nameOfFood, daysSinceEaten: days });
+  const item = new ItemModel({ itemName: itemName });
   try {
-    await food.save();
-    console.log(food);
+    await item.save();
+    console.log(item);
     // res.send("Thank you gamer");
   } catch (error) {
     console.log(error);
@@ -31,7 +31,7 @@ app.post("/insert", async (req, res) => {
 });
 
 app.get("/read", async (req, res) => {
-  FoodModel.find({}, (err, result) => {
+  ItemModel.find({}, (err, result) => {
     if (err) {
       res.send(err);
     }
@@ -42,7 +42,7 @@ app.get("/read", async (req, res) => {
 app.delete("/delete/:id", async (req, res) => {
   const id = req.params.id;
 
-  await FoodModel.findByIdAndDelete(id).exec();
+  await ItemModel.findByIdAndDelete(id).exec();
   res.send("item deleted");
 });
 
