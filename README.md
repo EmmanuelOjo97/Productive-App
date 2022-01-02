@@ -6,7 +6,7 @@ This App is deployed here [Click me](https://quirky-yonath-cd000d.netlify.app/).
 # Getting started
 This App can be run locallaly by cloning the repository with the following commands in your terminal.
 
- git clone https://github.com/EmmanuelOjo97/Joke-Repo.git
+ git clone https://github.com/EmmanuelOjo97/Productive-App.git
  
  npm install
  
@@ -24,9 +24,11 @@ This App can be run locallaly by cloning the repository with the following comma
  
  # Built With 
  [React](https://reactjs.org/) 
+ 
  [Express](https://expressjs.com/) 
+ 
  [Mongodb](https://www.mongodb.com/)
+ 
  [Node](https://nodejs.org/en/)
 
-# API
-https://covid19.mathdro.id/api
+
